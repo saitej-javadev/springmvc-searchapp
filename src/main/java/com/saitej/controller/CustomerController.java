@@ -4,15 +4,17 @@ package com.saitej.controller;
 import com.saitej.model.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class CustomerController {
 
     @RequestMapping("/login")
     public String loginAction(){
+       /* String str = null;// excplicitly generating exception
+        str.length();*/
         return "userform";
     }
 
@@ -23,5 +25,12 @@ public class CustomerController {
         System.out.println(customer);
         return "success";
 
+    }
+
+    @ExceptionHandler(NullPointerException.class)
+    public String handleException( NullPointerException e,Model model){
+        System.out.println(e.getMessage());
+        model.addAttribute("exception" ,e);
+        return "error";
     }
 }

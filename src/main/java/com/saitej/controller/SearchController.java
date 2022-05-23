@@ -11,6 +11,7 @@ public class SearchController {
 
     @RequestMapping("/home")
     public String showHomePage(){
+
         return "home";
     }
 
