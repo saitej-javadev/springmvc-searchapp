@@ -1,8 +1,6 @@
 
 Z
 *src/main/webapp/WEB-INF/views/userform.jsp,2\f\2f4217e40eef5ccd5e775278728e273be6a1547c
-O
-src/main/webapp/WEB-INF/web.xml,2\e\2e22b6edd746fa3dc40ad7276c87c8d87d72a392
 \
 ,src/main/java/com/saitej/model/Customer.java,5\f\5fa683025bfed176cd61ab87850beffc6084f440
 I
